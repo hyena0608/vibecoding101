@@ -1,0 +1,144 @@
+---
+title: "Build a Personal Finance Dashboard with Claude Code"
+description: "Create a personal finance tracker with charts, categories, and monthly reports — just by describing what you want to Claude Code."
+date: "2026-03-24"
+category: "tutorial"
+thumbnail: "/images/tutorials/dashboard-claude-code.png"
+---
+
+## What You'll Build
+
+A personal finance dashboard with:
+- Add expenses and income with amount, category, and date
+- Pie chart showing spending by category
+- Bar chart showing monthly income vs. expenses
+- Summary cards (total income, total expenses, balance)
+- Filter by month and category
+- Data saved in your browser
+
+This is the #3 most requested project from vibe coding beginners — and it's surprisingly easy to build.
+
+## Before You Start
+
+- [Claude Code](https://claude.ai) installed
+- 15-20 minutes
+
+<Step number={1} title="Set Up the Project">
+
+```
+mkdir my-finance-dashboard
+cd my-finance-dashboard
+claude
+```
+
+Tell Claude Code:
+
+```
+Create a Next.js app with Tailwind CSS for a personal finance dashboard.
+Install recharts for charts. Set up the project structure.
+```
+
+</Step>
+
+<Step number={2} title="Build the Transaction Form">
+
+```
+Build a transaction entry form with:
+- Type toggle: Income or Expense
+- Amount field (number input)
+- Category dropdown:
+  - For expenses: Food, Transport, Shopping, Bills, Entertainment, Health, Other
+  - For income: Salary, Freelance, Investment, Other
+- Date picker (defaults to today)
+- Note field (optional)
+- Save button
+
+Style it as a card with a clean, modern look. Purple theme.
+```
+
+</Step>
+
+<Step number={3} title="Add the Transaction List">
+
+```
+Below the form, show a list of all transactions:
+- Each row shows: date, category, note, and amount
+- Expenses in red, income in green
+- Sort by date (newest first)
+- Add a delete button on each row
+- Store everything in localStorage
+```
+
+</Step>
+
+<Step number={4} title="Create the Dashboard Charts">
+
+```
+At the top of the page, create a dashboard section with:
+
+1. Three summary cards in a row:
+   - Total Income (green)
+   - Total Expenses (red)
+   - Balance (blue, or red if negative)
+
+2. A pie chart showing expense breakdown by category
+   (use recharts PieChart with nice colors)
+
+3. A bar chart showing income vs expenses for the last 6 months
+   (use recharts BarChart with green for income, red for expenses)
+
+Make the charts responsive and add proper labels.
+```
+
+</Step>
+
+<Step number={5} title="Add Filtering">
+
+```
+Add a filter bar above the dashboard:
+- Month/year picker to filter by month
+- Category dropdown to filter by category
+- "All time" button to reset filters
+
+All charts and the summary cards should update when filters change.
+```
+
+</Step>
+
+<Step number={6} title="Deploy">
+
+```
+Deploy to Vercel so I can access it from any device.
+```
+
+</Step>
+
+<AdSlot />
+
+## Making It Better
+
+Once the basics work, try these upgrades:
+
+- *"Add a budget feature — let me set a monthly budget per category and show a progress bar"*
+- *"Add CSV export so I can download my transactions"*
+- *"Add a recurring transaction feature for monthly bills"*
+- *"Make it a PWA so I can install it on my phone"*
+
+Each request is one sentence to Claude Code.
+
+## Why This Project Matters
+
+A finance dashboard teaches you the core patterns of most web apps:
+- **Forms** — collecting user input
+- **Lists** — displaying data
+- **Charts** — visualizing data
+- **Filtering** — manipulating data views
+- **Storage** — persisting data
+
+Once you've built this, you can build almost any data-driven tool.
+
+## What's Next?
+
+- [Build a Todo App with Claude Code](/tutorials/build-todo-app-with-claude-code)
+- [Build an AI Chatbot](/tutorials/build-ai-chatbot-with-claude-code)
+- [Build a SaaS MVP — Waitlist App](/tutorials/build-saas-mvp-with-claude-code)

@@ -190,7 +190,7 @@ export default function Home() {
             minutes. No signup, no credit card — just start.
           </p>
           <Link
-            href="/tutorials/build-todo-app-with-cursor"
+            href="/tutorials/build-todo-app-with-claude-code"
             className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-3 font-semibold text-violet-700 shadow-md transition-all hover:shadow-lg hover:-translate-y-0.5"
           >
             Start the Tutorial &rarr;

@@ -1,0 +1,144 @@
+---
+title: "Build a SaaS MVP with Claude Code — Waitlist App"
+description: "Create a professional waitlist landing page with email collection, admin dashboard, and deployment. All by talking to Claude Code."
+date: "2026-03-25"
+category: "tutorial"
+thumbnail: "/images/tutorials/saas-mvp-claude-code.png"
+---
+
+## What You'll Build
+
+A complete SaaS waitlist system:
+- Beautiful landing page with email signup
+- "Thank you" confirmation with waitlist position
+- Admin page to view all signups
+- Email data stored in a database
+- Live on the internet, ready to share
+
+This is how real startups validate ideas — ship a waitlist page, collect emails, and see if people want your product.
+
+## Before You Start
+
+You'll need:
+- [Claude Code](https://claude.ai) installed (`npm install -g @anthropic-ai/claude-code`)
+- A [Vercel](https://vercel.com) account (free)
+- 15-20 minutes
+
+<Step number={1} title="Start Claude Code and Plan">
+
+Open your terminal, create a folder, and start Claude Code:
+
+```
+mkdir my-saas-waitlist
+cd my-saas-waitlist
+claude
+```
+
+Then describe your project:
+
+```
+I want to build a waitlist landing page for a SaaS product called "TaskFlow"
+— an AI-powered project management tool.
+
+The page should have:
+- A hero section with headline, description, and email signup form
+- A features section showing 3 key features with icons
+- A "How it works" section with 3 steps
+- Social proof showing "500+ people on the waitlist" (we'll start at 0)
+- Professional design, purple gradient theme, dark mode
+
+Use Next.js with Tailwind CSS.
+```
+
+</Step>
+
+<Step number={2} title="Add Email Collection">
+
+Once the landing page looks good, add the backend:
+
+```
+Now add email collection:
+- When someone enters their email and clicks "Join Waitlist", save it
+- Use a JSON file as a simple database for now
+- Create an API route at /api/waitlist that handles POST (add email)
+  and GET (list all emails)
+- Show the user their waitlist position after signup
+- Prevent duplicate emails
+- Show the total count of signups on the landing page in real time
+```
+
+</Step>
+
+<Step number={3} title="Build the Admin Dashboard">
+
+Every SaaS needs an admin view:
+
+```
+Create a simple admin page at /admin that:
+- Shows all collected emails in a table
+- Displays total signup count
+- Shows signup dates
+- Has a search box to filter emails
+- Protected with a simple password (use environment variable ADMIN_PASSWORD)
+```
+
+</Step>
+
+<Step number={4} title="Polish the Details">
+
+Make it production-ready:
+
+```
+Add these finishing touches:
+- Email validation (check for valid format before saving)
+- Loading state on the submit button
+- Success animation after signup
+- Mobile responsive design
+- SEO meta tags and Open Graph image
+- Favicon
+```
+
+</Step>
+
+<Step number={5} title="Deploy to Vercel">
+
+Ship it:
+
+```
+Deploy this to Vercel. Set ADMIN_PASSWORD as an environment variable
+with the value "demo123" for now.
+```
+
+Claude Code will deploy and give you a live URL. Share it to start collecting signups!
+
+</Step>
+
+<AdSlot />
+
+## Upgrading to a Real Database
+
+The JSON file approach works for getting started, but for a real product, you'll want a database. Tell Claude Code:
+
+```
+Replace the JSON file storage with Vercel Postgres (Neon).
+Set up the database table and migrate the existing data.
+```
+
+Claude Code will handle the migration. This is how real SaaS products are built — start simple, upgrade as you grow.
+
+## Real Talk: Is This a "Real" SaaS?
+
+This waitlist page is exactly what companies like Robinhood, Superhuman, and Linear used to validate their ideas before building the full product. The pattern:
+
+1. Build a landing page (you just did this)
+2. Collect emails (you have this too)
+3. See if people care (check your signups)
+4. Build the actual product only if there's demand
+
+You've just completed step 1-2 in under 20 minutes.
+
+## What's Next?
+
+- [Build a Personal Finance Dashboard](/tutorials/build-dashboard-with-claude-code)
+- [Build an AI Chatbot for Your Website](/tutorials/build-ai-chatbot-with-claude-code)
+- [Create a Landing Page with v0](/tutorials/create-landing-page-with-v0)

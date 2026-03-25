@@ -1,0 +1,155 @@
+---
+title: "Build an AI Chatbot for Your Website with Claude Code"
+description: "Create a working AI-powered chatbot that answers questions about your business. No AI knowledge required — Claude Code builds it all."
+date: "2026-03-24"
+category: "tutorial"
+thumbnail: "/images/tutorials/chatbot-claude-code.png"
+---
+
+## What You'll Build
+
+An AI chatbot widget for any website:
+- Chat bubble in the bottom-right corner
+- Users type questions, AI responds
+- Customizable with your own FAQ content
+- Typing indicator and smooth animations
+- Works on any website
+
+This is the #5 most-searched vibe coding project — and the one that feels the most magical.
+
+## Before You Start
+
+- [Claude Code](https://claude.ai) installed
+- A free [Vercel](https://vercel.com) account
+- 15-20 minutes
+
+<Callout type="info">
+This tutorial uses the Vercel AI Gateway for the chatbot's AI brain. It's free to start — you get $2 of credits which covers thousands of messages.
+</Callout>
+
+<Step number={1} title="Set Up the Project">
+
+```
+mkdir my-chatbot
+cd my-chatbot
+claude
+```
+
+Tell Claude Code:
+
+```
+Create a Next.js app with Tailwind CSS for an AI chatbot.
+Install the AI SDK (ai and @ai-sdk/react packages).
+```
+
+</Step>
+
+<Step number={2} title="Build the Chat Interface">
+
+```
+Build a chat widget component:
+- A floating button in the bottom-right corner (purple circle with chat icon)
+- Clicking it opens a chat panel (400px wide, 500px tall)
+- The panel has:
+  - A header with "Ask me anything" and a close button
+  - A message area showing the conversation
+  - User messages aligned right (purple bubbles)
+  - Bot messages aligned left (gray bubbles)
+  - A text input at the bottom with a send button
+- Smooth open/close animation
+- Mobile responsive (full-width on small screens)
+```
+
+</Step>
+
+<Step number={3} title="Add the AI Brain">
+
+```
+Connect the chatbot to an AI model:
+- Create an API route at /api/chat
+- Use the AI SDK's streamText function
+- Use the model "anthropic/claude-haiku-4.5" (fast and cheap)
+- Set a system prompt: "You are a helpful assistant for a tech company
+  called TechFlow. You help users understand our product, a project
+  management tool. Be concise, friendly, and helpful. If you don't know
+  the answer, suggest they email support@techflow.com"
+- Use the useChat hook on the frontend for streaming responses
+- Show a typing indicator while the AI is responding
+```
+
+</Step>
+
+<Step number={4} title="Set Up AI Gateway">
+
+For the AI to work, you need an API connection. Tell Claude Code:
+
+```
+Set up this project with Vercel AI Gateway:
+- Run vercel link to connect to a Vercel project
+- Run vercel env pull to get the OIDC credentials
+- The AI SDK will use these automatically
+```
+
+<Callout type="tip">
+The AI Gateway gives you $2 of free credits — enough for thousands of chatbot messages while testing.
+</Callout>
+
+</Step>
+
+<Step number={5} title="Customize the Knowledge Base">
+
+Make the chatbot answer questions about YOUR business:
+
+```
+Update the system prompt with this information about our product:
+
+Product: TechFlow - AI Project Management
+Pricing: Free (up to 3 projects), Pro $12/mo (unlimited), Team $29/mo
+Features: AI task prioritization, smart deadlines, team workload balancing
+Founded: 2026, based in San Francisco
+Support: support@techflow.com
+
+The chatbot should answer questions about pricing, features, and how to
+get started. For technical issues, direct users to support email.
+```
+
+</Step>
+
+<Step number={6} title="Deploy">
+
+```
+Deploy to Vercel and make sure the AI Gateway credentials are set up
+for production.
+```
+
+Share the URL and your chatbot is live!
+
+</Step>
+
+<AdSlot />
+
+## Making It Smarter
+
+Once the basic chatbot works, try:
+
+- *"Add suggested questions as clickable chips below the chat input — 'What's the pricing?', 'How do I get started?', 'What features are included?'"*
+- *"Save chat history in localStorage so the conversation persists on page refresh"*
+- *"Add a feedback button (thumbs up/down) on each bot message"*
+- *"Make the chatbot greet new visitors automatically after 5 seconds"*
+
+## Embedding on Any Website
+
+Once deployed, you can embed this chatbot on any website with a simple script tag. Tell Claude Code:
+
+```
+Create an embeddable version of this chatbot — generate a script tag
+that anyone can paste into their HTML to add the chatbot widget.
+```
+
+This is how real chatbot SaaS products like Intercom and Drift work.
+
+## What's Next?
+
+- [Build a Todo App with Claude Code](/tutorials/build-todo-app-with-claude-code)
+- [Build a Personal Finance Dashboard](/tutorials/build-dashboard-with-claude-code)
+- [Build a SaaS MVP — Waitlist App](/tutorials/build-saas-mvp-with-claude-code)

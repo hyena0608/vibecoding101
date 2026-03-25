@@ -1,0 +1,148 @@
+---
+title: "Build a Todo App with Claude Code in 10 Minutes"
+description: "Build a fully working todo app by just talking to Claude Code. No coding knowledge required — describe what you want and watch it happen."
+date: "2026-03-25"
+category: "tutorial"
+thumbnail: "/images/tutorials/todo-app-claude-code.png"
+---
+
+## What You'll Build
+
+A fully functional todo app with:
+- Add and delete tasks
+- Mark tasks as complete
+- Filter by status (all, active, completed)
+- Clean, modern design
+- Data saved in your browser (persists on refresh)
+
+You won't write a single line of code. Claude Code does everything.
+
+## Before You Start
+
+You'll need:
+- A computer (Mac, Windows, or Linux)
+- A [Claude](https://claude.ai) subscription (Pro or Team)
+- A terminal app (Terminal on Mac, Command Prompt on Windows)
+- 10 minutes
+
+<Callout type="info">
+Claude Code runs in your terminal, not in a browser. Don't worry — you'll just be typing plain English, not code commands.
+</Callout>
+
+<Step number={1} title="Install Claude Code">
+
+Open your terminal and run:
+
+```
+npm install -g @anthropic-ai/claude-code
+```
+
+Then start it by typing:
+
+```
+claude
+```
+
+Claude Code will open and wait for your instructions.
+
+</Step>
+
+<Step number={2} title="Create Your Project">
+
+Type this to Claude Code:
+
+```
+Create a new React project for a todo app using Vite and Tailwind CSS.
+Set up the project structure and install all dependencies.
+```
+
+Claude Code will create the folders, install packages, and set everything up. Just wait for it to finish — you'll see it working in real time.
+
+</Step>
+
+<Step number={3} title="Describe Your Todo App">
+
+Now tell Claude Code what to build:
+
+```
+Build a todo app with these features:
+- An input field at the top to add new tasks
+- Each task has a checkbox to mark it complete and a delete button
+- Three filter tabs: All, Active, Completed
+- Show the count of remaining tasks
+- Store all tasks in localStorage so they persist on page refresh
+- Use a clean, modern design with rounded corners, soft shadows,
+  and a purple accent color
+```
+
+Watch as Claude Code creates the components, writes the logic, and styles everything. This takes about 1-2 minutes.
+
+</Step>
+
+<Step number={4} title="See It Running">
+
+Claude Code will likely start the development server automatically. If not, type:
+
+```
+Start the development server so I can see the app
+```
+
+Open the URL it shows (usually `http://localhost:5173`) in your browser. Your todo app is running!
+
+</Step>
+
+<Step number={5} title="Customize It">
+
+Now make it yours. Try saying:
+
+- *"Add a dark mode toggle in the top right corner"*
+- *"Add animations when tasks are checked off — a smooth strikethrough"*
+- *"Add a 'Clear Completed' button that removes all finished tasks"*
+- *"Make the input auto-focus when the page loads"*
+
+Each request takes a few seconds. You can see the changes live in your browser.
+
+</Step>
+
+<Step number={6} title="Deploy It">
+
+Ready to share? Tell Claude Code:
+
+```
+Deploy this app to Vercel so I can share it with others.
+```
+
+Claude Code will set up the deployment and give you a live URL. Your todo app is now on the internet!
+
+</Step>
+
+<AdSlot />
+
+## Troubleshooting
+
+**"Claude Code says it can't find npm"** — You need Node.js installed. Go to [nodejs.org](https://nodejs.org) and download the LTS version.
+
+**"The app doesn't look right"** — Describe the problem exactly: "The delete button overlaps the checkbox on mobile" or "The filter tabs are too small."
+
+**"I got an error in the terminal"** — Just tell Claude Code: "I see this error: [paste the error]. Fix it." It will resolve the issue.
+
+**"Claude Code is doing something I didn't ask for"** — Type "stop" and then clarify what you actually want.
+
+## What Makes Claude Code Different?
+
+Unlike other AI coding tools, Claude Code:
+- Runs **locally on your machine** — your code stays private
+- Can **create, edit, and delete files** directly — no copy-pasting
+- **Runs commands** like installing packages and starting servers
+- **Sees errors** and fixes them automatically
+- Works in a **conversational flow** — like texting with a developer
+
+## What's Next?
+
+You just built and deployed a real web app through conversation. Here are ideas for your next project:
+
+- [Build a SaaS MVP — Waitlist App](/tutorials/build-saas-mvp-with-claude-code)
+- [Build a Personal Finance Dashboard](/tutorials/build-dashboard-with-claude-code)
+- [Build an AI Chatbot for Your Website](/tutorials/build-ai-chatbot-with-claude-code)
+
+The process is always the same: describe what you want, refine, deploy. Happy building!
