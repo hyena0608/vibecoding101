@@ -1,0 +1,3 @@
+[     576ms] [WARNING] Unrecognized feature: 'ambient-light-sensor'. @ https://beginner-ai-tawny.vercel.app/tutorials/create-landing-page-with-v0:57
+[     576ms] [WARNING] Unrecognized feature: 'vr'. @ https://beginner-ai-tawny.vercel.app/tutorials/create-landing-page-with-v0:57
+[    1556ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://stackblitz.com/edit/vitejs-vite-landing-page?embed=1&file=src/App.tsx&hideExplorer=1&hideNavigation=1&theme=light:0

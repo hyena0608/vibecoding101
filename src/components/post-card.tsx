@@ -1,12 +1,5 @@
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import type { PostMeta } from "@/lib/mdx";
 
 interface PostCardProps {
@@ -14,27 +7,41 @@ interface PostCardProps {
   type: "blog" | "tutorials";
 }
 
+const categoryConfig: Record<string, { emoji: string; color: string }> = {
+  basics: { emoji: "📖", color: "bg-blue-50 border-blue-200" },
+  tools: { emoji: "🛠️", color: "bg-amber-50 border-amber-200" },
+  tutorial: { emoji: "👨‍💻", color: "bg-green-50 border-green-200" },
+};
+
 export function PostCard({ post, type }: PostCardProps) {
+  const config = categoryConfig[post.category] ?? {
+    emoji: "📝",
+    color: "bg-gray-50 border-gray-200",
+  };
+
   return (
-    <Link href={`/${type}/${post.slug}`}>
-      <Card className="group h-full transition-all hover:shadow-md hover:-translate-y-0.5">
-        <CardHeader>
-          <div className="mb-2 flex items-center gap-2">
-            <Badge variant="secondary" className="text-xs">
+    <Link href={`/${type}/${post.slug}`} className="group block h-full">
+      <div className="flex h-full flex-col overflow-hidden rounded-xl border border-border/60 bg-white shadow-sm transition-all group-hover:shadow-md group-hover:-translate-y-0.5">
+        {/* Color header strip */}
+        <div className={`flex items-center gap-3 border-b px-5 py-4 ${config.color}`}>
+          <span className="text-2xl">{config.emoji}</span>
+          <div className="flex items-center gap-2">
+            <Badge variant="secondary" className="text-xs font-medium">
               {post.category}
             </Badge>
             <span className="text-xs text-muted-foreground">
               {post.readingTime}
             </span>
           </div>
-          <CardTitle className="text-lg leading-snug group-hover:text-primary transition-colors">
+        </div>
+        {/* Content */}
+        <div className="flex flex-1 flex-col p-5">
+          <h3 className="mb-2 text-lg font-semibold leading-snug text-foreground transition-colors group-hover:text-primary">
             {post.title}
-          </CardTitle>
-          <CardDescription className="line-clamp-2">
+          </h3>
+          <p className="mb-4 line-clamp-2 flex-1 text-sm leading-relaxed text-muted-foreground">
             {post.description}
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
+          </p>
           <time className="text-xs text-muted-foreground">
             {new Date(post.date).toLocaleDateString("en-US", {
               year: "numeric",
@@ -42,8 +49,8 @@ export function PostCard({ post, type }: PostCardProps) {
               day: "numeric",
             })}
           </time>
-        </CardContent>
-      </Card>
+        </div>
+      </div>
     </Link>
   );
 }
