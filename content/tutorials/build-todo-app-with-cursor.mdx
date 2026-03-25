@@ -1,0 +1,124 @@
+---
+title: "Build a Todo App with Cursor in 10 Minutes"
+description: "Follow along as we build a complete todo app using Cursor's AI. Includes an interactive playground to try it yourself."
+date: "2026-03-25"
+category: "tutorial"
+thumbnail: "/images/tutorials/todo-app-cursor.png"
+---
+
+## What You'll Build
+
+A fully functional todo app with:
+- Add and delete tasks
+- Mark tasks as complete
+- Filter by status (all, active, completed)
+- Clean, modern design
+
+No coding knowledge required. You'll use Cursor's AI to generate everything.
+
+## Before You Start
+
+You'll need:
+- A computer (Mac, Windows, or Linux)
+- [Cursor](https://cursor.sh) installed (free download)
+- 10 minutes of your time
+
+<Callout type="info">
+Don't have Cursor installed yet? Try the interactive playground at the bottom of this tutorial to see the finished result first!
+</Callout>
+
+<Step number={1} title="Open Cursor and Create a Project">
+
+Open Cursor and create a new folder for your project. You can name it anything — we'll use `my-todo-app`.
+
+In Cursor, press **Cmd+L** (Mac) or **Ctrl+L** (Windows) to open the AI chat panel.
+
+</Step>
+
+<Step number={2} title="Describe Your App">
+
+Type this prompt in the AI chat:
+
+```
+Create a todo app with React and Tailwind CSS. Features:
+- Input field to add new tasks
+- Each task has a checkbox to mark complete
+- Delete button on each task
+- Filter tabs: All, Active, Completed
+- Show task count
+- Clean, modern design with rounded corners and soft shadows
+- Store tasks in localStorage so they persist on refresh
+```
+
+Press Enter and watch Cursor generate the code. It will create the necessary files automatically.
+
+</Step>
+
+<Step number={3} title="Review and Run">
+
+Cursor will generate the files. To see your app:
+
+1. Open the terminal in Cursor (**Ctrl+`**)
+2. Type `npm install` and press Enter
+3. Type `npm run dev` and press Enter
+4. Open `http://localhost:3000` in your browser
+
+You should see your todo app running!
+
+</Step>
+
+<Step number={4} title="Customize It">
+
+Now make it yours. Try these prompts in the AI chat:
+
+- *"Change the color theme to purple"*
+- *"Add a 'Clear Completed' button at the bottom"*
+- *"Add an animation when tasks are checked off"*
+- *"Make the input field auto-focus when the page loads"*
+
+Each prompt will modify the code. The app updates live in your browser.
+
+</Step>
+
+<Step number={5} title="Deploy It">
+
+Ready to share your app with the world?
+
+1. Type in the AI chat: *"Set up this project for deployment on Vercel"*
+2. Go to [vercel.com](https://vercel.com) and sign up with your GitHub account
+3. Drag and drop your project folder, or connect your GitHub repository
+4. Click Deploy
+
+Your todo app is now live on the internet!
+
+</Step>
+
+<AdSlot />
+
+## Try It Yourself
+
+Here's a working version of what you'll build. Click around and try adding some tasks:
+
+<Playground
+  url="https://stackblitz.com/edit/vitejs-vite-todo-app?embed=1&file=src/App.tsx&hideExplorer=1&hideNavigation=1&theme=light"
+  title="Todo App Demo"
+/>
+
+## Troubleshooting
+
+**"Cursor is asking me to choose a model"** — Select Claude or GPT-4. Both work great for this tutorial.
+
+**"The app doesn't look right"** — Tell the AI exactly what's wrong: "The todo items are overlapping" or "The delete button is in the wrong position."
+
+**"I got an error"** — Copy the error message and paste it into the AI chat. Say "Fix this error" and it will resolve it.
+
+## What's Next?
+
+Congratulations! You just built and deployed a real web app. Here are some ideas for what to build next:
+
+- A personal budget tracker
+- A habit tracker with streaks
+- A simple blog
+- A recipe collection app
+
+The process is always the same: describe what you want, iterate, and deploy. Happy building!
